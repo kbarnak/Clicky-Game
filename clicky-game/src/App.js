@@ -3,22 +3,25 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Tile from './components/Tile';
+// import './images';
+import emojis from './images';
 
 class App extends Component {
   state = {
     currentScore: 0,
     topScore: 0,
-    message: "You guessed correctly",
+    message: "Try not to double click the Emoji!",
     clicked: [],
-    tiles: [
-      { id: 0, val: "A", img: './images/angryface.png' },
-      { id: 1, val: "B", },
-      { id: 2, val: "C" },
-      { id: 3, val: "D" },
-      { id: 4, val: "E" },
-      { id: 5, val: "F" },
-      { id: 6, val: "G" },
-      { id: 7, val: "H" }]
+    tiles: emojis
+    // tiles: [
+    //   { id: 0, src: './im' },
+    //   { id: 1, src: './images/annoyedface.png' },
+    //   { id: 2, src: './images/laughingface.png' },
+    //   { id: 3, src: './images/lovelyface.png' },
+    //   { id: 4, src: './images/moneyface.png' },
+    //   { id: 5, val: './images/nerdface.png' },
+    //   { id: 6, val: './images/nerdface.png' },
+    //   { id: 7, val: './images/sillyface.png' }]
   }
   shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -40,7 +43,7 @@ class App extends Component {
         console.log(this.state.clicked)
       })
     } else {
-      alert("You lose")
+      alert("Sorry! You lose!")
       if (this.state.currentScore > this.state.topScore) {
         this.setState({
           clicked: [],
@@ -68,7 +71,14 @@ class App extends Component {
           message={this.state.message}
         />
         <div className="game-space">
-          {this.state.tiles.map((tile, i) => < Tile img={tile.img} key={i} id={tile.id} handleTileClick={this.handleTileCick} />)}
+          {this.state.tiles.map((tile, i) => (
+            < Tile
+              src={tile.src}
+              key={i}
+              id={tile.id}
+              handleTileClick={this.handleTileCick}
+            />
+          ))}
         </div>
       </div>
     );

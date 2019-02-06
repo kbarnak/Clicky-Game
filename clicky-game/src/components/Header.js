@@ -7,7 +7,7 @@ export default function Header(props) {
 
     return (
         <header className="inner-container">
-            <div>Clicky Game</div>
+            <div>Clicky Emoji Game</div>
             <div>{props.message}</div>
             <div>Current Score: {props.currentScore}</div>
             <div>Top Score: {props.topScore}</div>

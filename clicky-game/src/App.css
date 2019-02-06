@@ -1,28 +1,55 @@
 .container {
   display: flex;
-  background:lightblue;
+  height: 100%;
+  background: #bcf3ff;
   flex-direction: column;
-  /* justify-content: stretch; */
 }
 
 .inner-container {
+  height: 100px;
   flex-grow: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 22pt;
+  font-weight: bold;
+  background-color: lightcoral;
 }
 
-.tile {
+/* .tile {
   border: 5px solid red;
   height: 100px;
   width: 100px;
   background-color: blueviolet;
   margin: 10pt;
+} */
+
+.image {
+  height: 50%;
+  width: 50%;
+  margin: 10pt;
+}
+/* 
+.image {
+  display: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+} */
+.image img {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
 }
 
 .game-space {
+  width: 100%;
+  height: 100%;
   display: flex;
-  /* margin: 100px; */
+  /* flex-wrap: wrap; */
   justify-content: space-evenly;
+  margin: 5px;
 }
 
 /* .App {
