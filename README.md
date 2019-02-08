@@ -2,6 +2,8 @@
 
 Welcome to the Emoji Clicky Memory Game!
 
+https://kbarnak.github.io/Clicky-Game/
+
 ## Instructions 
 The purpose of this app is to utilize React to make a dynamic page that listens for different click events when clicked on an image. 
 
